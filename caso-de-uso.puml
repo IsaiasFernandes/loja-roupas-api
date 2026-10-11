@@ -1,0 +1,42 @@
+@startuml
+left to right direction
+actor "Usuário da API" as U
+rectangle "API REST - Loja de Roupas" {
+  package Cliente {
+    usecase "Cadastrar cliente" as C1
+    usecase "Listar clientes" as C2
+    usecase "Consultar cliente por ID" as C3
+    usecase "Atualizar cliente" as C4
+    usecase "Apagar cliente" as C5
+  }
+  package Produto {
+    usecase "Cadastrar produto" as P1
+    usecase "Listar produtos" as P2
+    usecase "Consultar produto por ID" as P3
+    usecase "Atualizar produto" as P4
+    usecase "Apagar produto" as P5
+  }
+  package Pedido {
+    usecase "Registrar pedido" as D1
+    usecase "Listar pedidos" as D2
+    usecase "Consultar pedido por ID" as D3
+    usecase "Atualizar pedido" as D4
+    usecase "Apagar pedido" as D5
+  }
+}
+U --> C1
+U --> C2
+U --> C3
+U --> C4
+U --> C5
+U --> P1
+U --> P2
+U --> P3
+U --> P4
+U --> P5
+U --> D1
+U --> D2
+U --> D3
+U --> D4
+U --> D5
+@enduml
